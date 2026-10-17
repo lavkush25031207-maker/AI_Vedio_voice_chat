@@ -1,0 +1,11 @@
+{
+  "name": "talkflow-ai",
+  "private": true,
+  "scripts": {
+    "dev": "cd frontend && npm run dev",
+    "dev:frontend": "cd frontend && set TALKFLOW_SKIP_BACKEND=1&& npm run dev",
+    "dev:backend": "py -3 -m uvicorn app.main:app --app-dir backend --host 127.0.0.1 --port 8000 --reload",
+    "build": "cd frontend && npm run build",
+    "test:backend": "python -m pytest backend\\tests"
+  }
+}

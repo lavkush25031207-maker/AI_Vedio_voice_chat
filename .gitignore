@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.db
+.env
+.env.*
+!.env.example
+*.egg-info/
+venv/
+.venv/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Node
+node_modules/
+dist/
+.vite/
+
+# Local downloads and extracted vendor sources
+pyyaml-*.tar.gz
+pyyaml-*/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
