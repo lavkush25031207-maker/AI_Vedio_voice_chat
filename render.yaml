@@ -13,8 +13,9 @@ services:
       - key: APP_PUBLIC_URL
         value: https://talkflow-frontend.onrender.com
 
-  - type: static_site
+  - type: web
     name: talkflow-frontend
+    runtime: static
     rootDir: frontend
     buildCommand: npm install && npm run build
     staticPublishPath: dist
