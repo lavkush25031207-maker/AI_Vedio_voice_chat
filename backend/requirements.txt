@@ -11,3 +11,4 @@ python-dotenv
 
 pymysql
 cryptography
+psycopg[binary]>=3.1.18

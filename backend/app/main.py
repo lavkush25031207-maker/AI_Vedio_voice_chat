@@ -35,7 +35,11 @@ app = FastAPI(
 # Allows smooth client communication from React frontend (port 5173) to FastAPI server
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    allow_origins=[
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+        os.getenv("APP_PUBLIC_URL", "https://talkflow-frontend.onrender.com"),
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
