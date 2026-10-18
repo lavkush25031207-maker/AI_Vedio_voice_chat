@@ -41,6 +41,7 @@ app.add_middleware(
         os.getenv("APP_PUBLIC_URL", "https://talkflow-frontend.onrender.com"),
         "https://ai-vedio-voice-chat.vercel.app",
     ],
+    allow_origin_regex=r"https://ai-vedio-voice-chat.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
