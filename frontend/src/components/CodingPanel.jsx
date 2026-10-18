@@ -656,7 +656,7 @@ export default function CodingPanel() {
   };
 
   return (
-    <div style={{ maxWidth: '1100px', margin: '0 auto', position: 'relative', minHeight: '620px' }}>
+    <div className="coding-panel" style={{ maxWidth: '1100px', margin: '0 auto', position: 'relative', minHeight: '620px' }}>
       
       {/* Switcher Tab Header */}
       <div style={{ 
@@ -711,7 +711,7 @@ export default function CodingPanel() {
         </button>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '5fr 6fr', gap: '24px', alignItems: 'start', position: 'relative' }}>
+      <div className="responsive-grid coding-workspace-grid" style={{ display: 'grid', gridTemplateColumns: '5fr 6fr', gap: '24px', alignItems: 'start', position: 'relative' }}>
         
         {/* LEFT COLUMN: Challenge Info & AI Speech Avatar */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
@@ -1518,7 +1518,7 @@ export default function CodingPanel() {
             </div>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+          <div className="responsive-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
             
             {/* Strengths checklist */}
             <div>

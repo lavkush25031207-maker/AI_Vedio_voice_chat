@@ -82,7 +82,7 @@ export default function ProfilePanel({ student, onUpdateStudent }) {
   };
 
   return (
-    <div className="glass-panel" style={{ padding: '30px', maxWidth: '750px', margin: '0 auto' }}>
+    <div className="glass-panel profile-panel" style={{ padding: '30px', maxWidth: '750px', margin: '0 auto' }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '24px' }}>
         <div style={{
           background: 'linear-gradient(135deg, rgba(6, 182, 212, 0.2), rgba(139, 92, 246, 0.2))',
@@ -137,7 +137,7 @@ export default function ProfilePanel({ student, onUpdateStudent }) {
         </div>
 
         {/* Multi-column grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+        <div className="responsive-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
           {/* Target Career Track */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             <label style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '6px' }}>

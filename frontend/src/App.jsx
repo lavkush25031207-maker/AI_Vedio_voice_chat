@@ -186,7 +186,7 @@ export default function App() {
   // RENDER INTERACTION FOR UNAUTHENTICATED USERS
   if (!currentStudent) {
     return (
-      <div style={{
+      <div className="auth-shell" style={{
         display: 'flex',
         minHeight: '100vh',
         background: 'radial-gradient(circle at center, #0f172a 0%, #020617 100%)',
@@ -416,9 +416,9 @@ export default function App() {
 
   // RENDER MAIN APPLICATION LAYOUT FOR LOGGED IN USERS
   return (
-    <div style={{ display: 'flex', minHeight: '100vh', background: 'var(--bg-primary)' }}>
+    <div className="app-shell" style={{ display: 'flex', minHeight: '100vh', background: 'var(--bg-primary)' }}>
       {/* Sidebar Navigation */}
-      <aside className="glass-panel" style={{
+      <aside className="glass-panel app-sidebar" style={{
         width: '280px',
         margin: '16px 0 16px 16px',
         padding: '24px 16px',
@@ -533,7 +533,7 @@ export default function App() {
       </aside>
 
       {/* Main Workspace Display Content */}
-      <main style={{
+      <main className="app-workspace" style={{
         flex: 1,
         padding: '24px 32px 32px 32px',
         overflowY: 'auto',
@@ -543,7 +543,7 @@ export default function App() {
         gap: '24px'
       }}>
         {/* Workspace Sub Header */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var(--border-color)', paddingBottom: '16px' }}>
+        <div className="workspace-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var(--border-color)', paddingBottom: '16px' }}>
           <div>
             <span style={{ fontSize: '0.75rem', textTransform: 'uppercase', color: 'var(--color-purple)', letterSpacing: '0.1em', fontWeight: 'bold' }}>
               Student Control Panel

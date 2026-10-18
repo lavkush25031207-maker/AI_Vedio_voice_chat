@@ -932,7 +932,7 @@ export default function VideoPanel() {
   };
 
   return (
-    <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+    <div className="video-panel" style={{ maxWidth: '1000px', margin: '0 auto' }}>
       
       {/* Switcher Tabs */}
       <div style={{ 
@@ -987,13 +987,13 @@ export default function VideoPanel() {
         </button>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '5fr 3fr', gap: '24px' }}>
+      <div className="responsive-grid video-workspace-grid" style={{ display: 'grid', gridTemplateColumns: '5fr 3fr', gap: '24px' }}>
         
         {/* Left Side: Active Workspace */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
           
           {/* Universal Immersive Splitscreen AI Live Interview Grid */}
-          <div style={{
+          <div className="responsive-grid video-stage-grid" style={{
             display: 'grid',
             gridTemplateColumns: '1fr 1fr',
             height: '360px',
@@ -1847,7 +1847,7 @@ export default function VideoPanel() {
                   }}
                 />
 
-                <div style={{ display: 'flex', gap: '12px' }}>
+                <div className="eval-actions" style={{ display: 'flex', gap: '12px' }}>
                   <button
                     onClick={evalRecording ? stopEvalRecognition : startEvalRecognition}
                     style={{

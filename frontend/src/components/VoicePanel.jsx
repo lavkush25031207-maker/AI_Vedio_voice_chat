@@ -1277,7 +1277,7 @@ export default function VoicePanel() {
   };
 
   return (
-    <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+    <div className="voice-panel" style={{ maxWidth: '1000px', margin: '0 auto' }}>
       
       {/* Premium Glass Switcher Tabs */}
       <div style={{ 
@@ -1332,7 +1332,7 @@ export default function VoicePanel() {
         </button>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '5fr 3fr', gap: '24px' }}>
+      <div className="responsive-grid voice-workspace-grid" style={{ display: 'grid', gridTemplateColumns: '5fr 3fr', gap: '24px' }}>
         
         {/* Left Side: Active Workspace */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
@@ -1872,7 +1872,7 @@ export default function VoicePanel() {
                   onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.08)'}
                 />
 
-                <div style={{ display: 'flex', gap: '12px' }}>
+                <div className="eval-actions" style={{ display: 'flex', gap: '12px' }}>
                   {/* Microphone controller */}
                   <button
                     onClick={evalRecording ? stopEvalRecognition : startEvalRecognition}

@@ -108,7 +108,7 @@ export default function ChatPanel() {
   };
 
   return (
-    <div className="glass-panel" style={{ display: 'flex', flexDirection: 'column', height: '100%', maxHeight: '800px', overflow: 'hidden' }}>
+    <div className="glass-panel chat-panel" style={{ display: 'flex', flexDirection: 'column', height: '100%', maxHeight: '800px', overflow: 'hidden' }}>
       
       {/* Header */}
       <div style={{ padding: '16px 20px', borderBottom: '1px solid rgba(255, 255, 255, 0.1)', display: 'flex', alignItems: 'center', gap: '12px' }}>
