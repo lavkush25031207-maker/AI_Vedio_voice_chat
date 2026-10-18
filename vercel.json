@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://talkflow-api.onrender.com/api/:path*"
+      "destination": "https://talkflow-api-m5b0.onrender.com/api/:path*"
     }
   ]
 }
