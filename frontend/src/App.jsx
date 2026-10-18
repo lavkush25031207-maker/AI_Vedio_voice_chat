@@ -450,6 +450,10 @@ export default function App() {
                 Interview Tutor
               </span>
             </div>
+            <div className="mobile-top-title">
+              <span>STUDENT CONTROL PANEL</span>
+              <strong>{activeTab === 'profile' ? 'Profile Setup' : activeTab.charAt(0).toUpperCase() + activeTab.slice(1)}</strong>
+            </div>
           </div>
 
           {/* Nav List */}
@@ -533,7 +537,7 @@ export default function App() {
       </aside>
 
       {/* Main Workspace Display Content */}
-      <main className="app-workspace" style={{
+      <main className={`app-workspace workspace-${activeTab}`} style={{
         flex: 1,
         padding: '24px 32px 32px 32px',
         overflowY: 'auto',

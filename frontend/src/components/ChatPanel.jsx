@@ -111,7 +111,7 @@ export default function ChatPanel() {
     <div className="glass-panel chat-panel" style={{ display: 'flex', flexDirection: 'column', height: '100%', maxHeight: '800px', overflow: 'hidden' }}>
       
       {/* Header */}
-      <div style={{ padding: '16px 20px', borderBottom: '1px solid rgba(255, 255, 255, 0.1)', display: 'flex', alignItems: 'center', gap: '12px' }}>
+      <div className="chat-header" style={{ padding: '16px 20px', borderBottom: '1px solid rgba(255, 255, 255, 0.1)', display: 'flex', alignItems: 'center', gap: '12px' }}>
         <div style={{ background: 'var(--color-primary)', padding: '8px', borderRadius: '50%', display: 'flex' }}>
           <Bot size={20} color="#fff" />
         </div>
@@ -122,7 +122,7 @@ export default function ChatPanel() {
       </div>
 
       {/* Messages Area */}
-      <div style={{ flex: 1, overflowY: 'auto', padding: '20px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+      <div className="chat-messages" style={{ flex: 1, overflowY: 'auto', padding: '20px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
         {messages.map((msg, idx) => {
           const isUser = msg.role === 'user';
           return (
@@ -206,7 +206,7 @@ export default function ChatPanel() {
       </div>
 
       {/* Input Area */}
-      <div style={{ padding: '16px 20px', borderTop: '1px solid rgba(255, 255, 255, 0.1)', background: 'rgba(15, 23, 42, 0.4)' }}>
+      <div className="chat-composer" style={{ padding: '16px 20px', borderTop: '1px solid rgba(255, 255, 255, 0.1)', background: 'rgba(15, 23, 42, 0.4)' }}>
         <form onSubmit={handleSend} style={{ display: 'flex', gap: '10px' }}>
           <input
             type="text"

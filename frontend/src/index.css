@@ -193,6 +193,7 @@ img, video, canvas, svg {
 .app-sidebar { flex: 0 0 280px; min-width: 0; }
 .app-workspace, .workspace-header > *, .dashboard-panel, .profile-panel,
 .chat-panel, .coding-panel, .voice-panel, .video-panel { min-width: 0; }
+.mobile-top-title { display: none; }
 
 @media (max-width: 1100px) {
   .app-sidebar { flex-basis: 232px; }
@@ -211,6 +212,10 @@ img, video, canvas, svg {
 
   .app-shell { display: block !important; min-height: 100dvh !important; }
   .app-sidebar { width: auto !important; margin: 10px 10px 0 !important; padding: 14px 12px !important; border-radius: var(--radius-md) !important; }
+  .app-sidebar > div:first-child > div:first-child { display: flex; align-items: center; min-width: 0; }
+  .mobile-top-title { display: flex; flex-direction: column; align-items: flex-end; gap: 1px; margin-left: auto; text-align: right; min-width: 0; }
+  .mobile-top-title span { color: var(--color-purple); font-size: 0.55rem; font-weight: 800; letter-spacing: 0.06em; white-space: nowrap; }
+  .mobile-top-title strong { color: #fff; font-family: var(--font-display); font-size: 0.95rem; white-space: nowrap; }
   .app-sidebar nav { flex-direction: row !important; overflow-x: auto; gap: 8px !important; padding: 2px 0 4px; scrollbar-width: none; }
   .app-sidebar nav::-webkit-scrollbar { display: none; }
   .app-sidebar nav button { flex: 0 0 auto; width: auto !important; min-height: 42px; padding: 9px 12px !important; white-space: nowrap; }
@@ -218,7 +223,20 @@ img, video, canvas, svg {
   .app-sidebar > div:last-child { display: none !important; }
 
   .app-workspace { max-height: none !important; overflow: visible !important; padding: 18px 12px 28px !important; gap: 18px !important; }
-  .workspace-header { align-items: flex-start !important; gap: 12px; padding-bottom: 12px !important; }
+  .workspace-header {
+    display: none !important;
+  }
+  /* The active section title is shown in the top TalkFlow header above. */
+  .workspace-chat {
+    margin-top: 0;
+  }
+  .workspace-header {
+    align-items: flex-start !important;
+    justify-content: flex-end !important;
+    gap: 12px;
+    padding-bottom: 12px !important;
+    text-align: right;
+  }
   .workspace-header h2 { font-size: 1.4rem !important; }
   .workspace-header a span { display: none; }
 
@@ -231,6 +249,62 @@ img, video, canvas, svg {
   .eval-actions button { flex: 1 1 180px !important; width: 100%; }
   .voice-panel button, .video-panel button, .coding-panel button { max-width: 100%; min-height: 42px; }
   .voice-panel textarea, .video-panel textarea, .coding-panel textarea, .coding-panel pre { max-width: 100%; }
+
+  /* Chat is an app-like viewport on mobile: only the transcript scrolls. */
+  .workspace-chat {
+    height: calc(100dvh - 170px) !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+    padding-bottom: 12px !important;
+  }
+
+  .workspace-chat > div:last-child {
+    display: flex;
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .workspace-chat .chat-panel {
+    display: flex !important;
+    flex: 1 1 auto;
+    height: 100% !important;
+    min-height: 0;
+    max-height: none !important;
+  }
+
+  .chat-messages {
+    min-height: 0;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(148, 163, 184, 0.55) transparent;
+  }
+
+  .chat-messages > div {
+    max-width: 92% !important;
+  }
+
+  .chat-composer {
+    flex: 0 0 auto;
+    padding: 12px 14px !important;
+  }
+
+  .chat-composer form {
+    min-width: 0;
+  }
+
+  .chat-composer input {
+    min-width: 0;
+    padding-left: 14px !important;
+    padding-right: 10px !important;
+  }
+}
+
+/* The compact chat view does not need the repeated assistant title bar. */
+@media (max-width: 1024px) {
+  .chat-panel .chat-header {
+    display: none !important;
+  }
 }
 
 @media (max-width: 420px) {
